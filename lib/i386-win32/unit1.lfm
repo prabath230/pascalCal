@@ -1,0 +1,212 @@
+object Calculator: TCalculator
+  Left = 369
+  Height = 348
+  Top = 247
+  Width = 510
+  Caption = 'Calculator'
+  ClientHeight = 348
+  ClientWidth = 510
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  LCLVersion = '2.0.10.0'
+  object tedit_n1: TEdit
+    Left = 48
+    Height = 33
+    Top = 56
+    Width = 192
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -19
+    Font.Name = 'Segoe UI Symbol'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 0
+  end
+  object tedit_n2: TEdit
+    Left = 48
+    Height = 33
+    Top = 192
+    Width = 192
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -19
+    Font.Name = 'Segoe UI Symbol'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 1
+  end
+  object Label1: TLabel
+    Left = 48
+    Height = 25
+    Top = 24
+    Width = 158
+    Caption = 'Enter First Number'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -19
+    Font.Name = 'Segoe UI Symbol'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+    OnClick = Label1Click
+  end
+  object Label2: TLabel
+    Left = 48
+    Height = 25
+    Top = 152
+    Width = 185
+    Caption = 'Enter Second Number'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -19
+    Font.Name = 'Segoe UI Symbol'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object sign_lbl: TLabel
+    Left = 96
+    Height = 40
+    Top = 104
+    Width = 19
+    Caption = '+'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -27
+    Font.Name = 'Sitka Small'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object result_lbl: TLabel
+    Left = 59
+    Height = 25
+    Top = 240
+    Width = 51
+    Caption = 'Result'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -19
+    Font.Name = 'Segoe UI Symbol'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Button1: TButton
+    Left = 40
+    Height = 33
+    Top = 280
+    Width = 91
+    Caption = 'Calculate'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -19
+    Font.Name = 'Segoe UI Symbol'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    OnClick = Button1Click
+    ParentFont = False
+    TabOrder = 2
+  end
+  object Buttonclear: TButton
+    Left = 152
+    Height = 34
+    Top = 280
+    Width = 88
+    Caption = 'Clear'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -19
+    Font.Name = 'Segoe UI Symbol'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    OnClick = ButtonclearClick
+    ParentFont = False
+    TabOrder = 3
+  end
+  object Buttonexit: TButton
+    Left = 384
+    Height = 34
+    Top = 280
+    Width = 91
+    Caption = 'Exit'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -19
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    OnClick = ButtonexitClick
+    ParentFont = False
+    TabOrder = 4
+  end
+  object RadioGroup1: TRadioGroup
+    Left = 272
+    Height = 209
+    Top = 24
+    Width = 217
+    AutoFill = True
+    Caption = 'Select Options'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    ClientHeight = 179
+    ClientWidth = 213
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -19
+    Font.Name = 'Segoe UI Symbol'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 5
+    object RadioAdd: TRadioButton
+      Left = 6
+      Height = 45
+      Top = 0
+      Width = 201
+      Caption = 'Addition'
+      Checked = True
+      OnChange = RadioAddChange
+      TabOrder = 3
+      TabStop = True
+    end
+    object Radiomulty: TRadioButton
+      Left = 6
+      Height = 45
+      Top = 45
+      Width = 201
+      Caption = 'Multiplication'
+      OnChange = RadiomultyChange
+      TabOrder = 0
+    end
+    object RadioDivide: TRadioButton
+      Left = 6
+      Height = 45
+      Top = 90
+      Width = 201
+      Caption = 'Division'
+      OnChange = RadioDivideChange
+      TabOrder = 1
+    end
+    object RadioSub: TRadioButton
+      Left = 6
+      Height = 44
+      Top = 135
+      Width = 201
+      Caption = 'Substraction'
+      OnChange = RadioSubChange
+      TabOrder = 2
+    end
+  end
+end
